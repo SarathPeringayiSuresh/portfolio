@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarath Peringayi Suresh — Data Scientist</title>
+    <meta name="description" content="Sarath Peringayi Suresh — Data Scientist based in Stockholm. Turning data into business growth." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Animated grid background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <!-- Mobile drawer backdrop -->
+    <div class="drawer-backdrop" hidden></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-mark">
+                <span class="brand-dot"></span>
+                <span class="brand-pulse"></span>
+            </div>
+            <div class="brand-text">
+                <div class="brand-name">SPS</div>
+                <div class="brand-sub">data.lab</div>
+            </div>
+        </div>
+
+        <nav class="nav" id="primary-nav">
+            <a href="#overview" class="nav-link active" data-section="overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+                <span>Overview</span>
+            </a>
+            <a href="#about" class="nav-link" data-section="about">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                <span>About</span>
+            </a>
+            <a href="#experience" class="nav-link" data-section="experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                <span>Experience</span>
+            </a>
+            <a href="#skills" class="nav-link" data-section="skills">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="6"/></svg>
+                <span>Skills</span>
+            </a>
+            <a href="#projects" class="nav-link" data-section="projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+                <span>Projects</span>
+            </a>
+            <a href="#education" class="nav-link" data-section="education">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v6c0 1 3 3 6 3s6-2 6-3v-6"/></svg>
+                <span>Education</span>
+            </a>
+            <a href="#contact" class="nav-link" data-section="contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <span>Contact</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="status-dot">
+                <span class="status-pulse"></span>
+                <span>Employed · open for new challenges</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+        <!-- Top bar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="breadcrumb">
+                    <span>~/</span><span class="bc-current">portfolio</span><span class="cursor">_</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-stat">
+                    <span class="stat-label">LIVE</span>
+                    <span class="stat-dot"></span>
+                </div>
+                <div class="topbar-stat">
+                    <span class="stat-label">STOCKHOLM</span>
+                    <span class="stat-value" id="local-time">--:--</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview / Hero -->
+        <section id="overview" class="section hero">
+            <div class="hero-grid">
+                <div class="hero-intro">
+                    <div class="tag">
+                        <span class="tag-dot"></span>
+                        <span>DATA SCIENTIST · STOCKHOLM, SE</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Turning <span class="gradient-text">data</span><br />
+                        into <span class="gradient-text-2">business growth</span>.
+                    </h1>
+                    <p class="hero-subtitle">
+                        I help companies become data-driven — from churn prediction and product analytics to self-service BI that ships measurable revenue impact.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View impact</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">
+                            <span>Get in touch</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-terminal">
+                    <div class="terminal-head">
+                        <span class="t-dot t-red"></span>
+                        <span class="t-dot t-yellow"></span>
+                        <span class="t-dot t-green"></span>
+                        <span class="t-title">~/sarath — zsh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+                        <div class="t-line t-out">sarath_peringayi_suresh</div>
+                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat role.json</span></div>
+                        <div class="t-line t-out">{</div>
+                        <div class="t-line t-out">  "title": "Data Scientist",</div>
+                        <div class="t-line t-out">  "company": "Position Green",</div>
+                        <div class="t-line t-out">  "location": "Stockholm, SE",</div>
+                        <div class="t-line t-out">  "stack": ["Python", "SQL", "dbt", "scikit-learn"],</div>
+                        <div class="t-line t-out">  "focus": "ML · Analytics · ELT"</div>
+                        <div class="t-line t-out">}</div>
+                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd t-blink">_</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPI cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card" data-kpi="churn">
+                    <div class="kpi-head">
+                        <span class="kpi-label">PRODUCT CHURN REDUCED</span>
+                        <span class="kpi-trend up">▲ impact</span>
+                    </div>
+                    <div class="kpi-value"><span class="counter" data-target="75">0</span><span class="kpi-unit">%</span></div>
+                    <div class="kpi-spark"><canvas id="spark-1"></canvas></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-head">
+                        <span class="kpi-label">YEARS · DATA SCIENCE</span>
+                        <span class="kpi-trend up">active</span>
+                    </div>
+                    <div class="kpi-value"><span class="counter" data-target="2" data-suffix="+">0</span></div>
+                    <div class="kpi-spark"><canvas id="spark-2"></canvas></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-head">
+                        <span class="kpi-label">DASHBOARDS · MODELS SHIPPED</span>
+                        <span class="kpi-trend up">growing</span>
+                    </div>
+                    <div class="kpi-value"><span class="counter" data-target="20" data-suffix="+">0</span></div>
+                    <div class="kpi-spark"><canvas id="spark-3"></canvas></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-head">
+                        <span class="kpi-label">CROSS-FUNCTIONAL TEAMS</span>
+                        <span class="kpi-trend">aligned</span>
+                    </div>
+                    <div class="kpi-value"><span class="counter" data-target="5">0</span></div>
+                    <div class="kpi-spark"><canvas id="spark-4"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="section-head">
+                <div class="section-tag">01 · ABOUT</div>
+                <h2 class="section-title">The analyst behind the dashboard</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="card about-card">
+                    <div class="card-head">
+                        <span class="card-title">profile.md</span>
+                        <span class="card-meta">UPDATED · 2026</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            I'm a <strong>Data Scientist</strong> based in Stockholm with a Master's in Data Science from Uppsala University and 2+ years of hands-on experience shipping end-to-end machine learning and analytics products at <strong>Position Green</strong>.
+                        </p>
+                        <p>
+                            My work sits at the intersection of <em>product, engineering and the business</em> — framing fuzzy questions, designing the data model, training the model, and getting the insight in front of the people who decide.
+                        </p>
+                        <p>
+                            I care about outcomes, not artifacts: a churn model that doesn't reduce churn isn't done. A dashboard nobody opens isn't either.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-side">
+                    <div class="card mini-card">
+                        <div class="mini-label">LOCATION</div>
+                        <div class="mini-value">Stockholm, Sweden</div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="mini-label">FOCUS</div>
+                        <div class="mini-value">ML · Analytics · ELT</div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="mini-label">LANGUAGES</div>
+                        <div class="mini-value">EN · ML · HI</div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="mini-label">STATUS</div>
+                        <div class="mini-value mini-online">
+                            <span class="mini-pulse"></span> Employed · open for new challenges
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="section-head">
+                <div class="section-tag">02 · EXPERIENCE</div>
+                <h2 class="section-title">Track record</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="t-item">
+                    <div class="t-marker"><span></span></div>
+                    <div class="card t-card">
+                        <div class="t-card-head">
+                            <div>
+                                <div class="t-role">Data Scientist</div>
+                                <div class="t-company">Position Green · Stockholm</div>
+                            </div>
+                            <div class="t-period">Aug 2024 — Present</div>
+                        </div>
+                        <ul class="t-bullets">
+                            <li><strong>Churn prediction framework</strong> — built end-to-end (problem framing → dbt features → scikit-learn → evaluation), contributing to a <span class="hl">75% reduction</span> in product-driven churn.</li>
+                            <li><strong>Feature adoption dashboard</strong> — surfaced low-engagement features and informed product decisions that lifted adoption.</li>
+                            <li><strong>Self-service BI</strong> — translated recurring questions into Metabase dashboards, eliminating manual KPI reporting across product, commercial and CRM.</li>
+                            <li><strong>Revenue Operations ELT</strong> — designed scalable pipelines feeding revenue tracking, forecasting and downstream analytics.</li>
+                            <li>Partnered with PMs, engineers and stakeholders to translate analysis into action.</li>
+                        </ul>
+                        <div class="t-tags">
+                            <span class="chip">Python</span>
+                            <span class="chip">SQL</span>
+                            <span class="chip">dbt</span>
+                            <span class="chip">scikit-learn</span>
+                            <span class="chip">Metabase</span>
+                            <span class="chip">PostHog</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-item">
+                    <div class="t-marker"><span></span></div>
+                    <div class="card t-card">
+                        <div class="t-card-head">
+                            <div>
+                                <div class="t-role">Platform Onboarding Analyst <span class="t-pill">Intern</span></div>
+                                <div class="t-company">Position Green · Stockholm</div>
+                            </div>
+                            <div class="t-period">Oct 2023 — Jun 2024</div>
+                        </div>
+                        <ul class="t-bullets">
+                            <li>Designed a comprehensive <strong>customer data model</strong> with the CTO, improving the org's ability to analyze platform data.</li>
+                            <li>Implemented scalable measure structures for sustainability data aligned with <span class="hl">ESRS, GHG Protocol & GRI</span> frameworks.</li>
+                        </ul>
+                        <div class="t-tags">
+                            <span class="chip">Data Modeling</span>
+                            <span class="chip">SQL Server</span>
+                            <span class="chip">ESG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="section-head">
+                <div class="section-tag">03 · SKILLS</div>
+                <h2 class="section-title">The toolkit</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="card chart-card">
+                    <div class="card-head">
+                        <span class="card-title">Domain proficiency</span>
+                        <span class="card-meta">RADAR</span>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <div class="card-head">
+                        <span class="card-title">Stack usage · last 12 months</span>
+                        <span class="card-meta">BAR</span>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-categories">
+                <div class="card sk-card">
+                    <div class="sk-head">Languages & Querying</div>
+                    <div class="sk-tags">
+                        <span class="chip chip-accent">Python</span>
+                        <span class="chip chip-accent">SQL</span>
+                        <span class="chip">HogQL</span>
+                        <span class="chip">Bash</span>
+                    </div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Machine Learning</div>
+                    <div class="sk-tags">
+                        <span class="chip chip-accent">scikit-learn</span>
+                        <span class="chip">Classification</span>
+                        <span class="chip">Predictive modeling</span>
+                        <span class="chip">Feature engineering</span>
+                        <span class="chip">Evaluation</span>
+                    </div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Experimentation & Statistics</div>
+                    <div class="sk-tags">
+                        <span class="chip">A/B testing</span>
+                        <span class="chip">Hypothesis testing</span>
+                        <span class="chip">Funnel analysis</span>
+                        <span class="chip">Experimental design</span>
+                    </div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Data Engineering</div>
+                    <div class="sk-tags">
+                        <span class="chip chip-accent">dbt</span>
+                        <span class="chip">ELT/ETL</span>
+                        <span class="chip">Data modeling</span>
+                        <span class="chip">SQL Server</span>
+                        <span class="chip">Jinja2</span>
+                        <span class="chip">DBUp</span>
+                    </div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">BI & Visualization</div>
+                    <div class="sk-tags">
+                        <span class="chip chip-accent">Metabase</span>
+                        <span class="chip">Tableau</span>
+                        <span class="chip">pandas</span>
+                        <span class="chip">Matplotlib</span>
+                        <span class="chip">Seaborn</span>
+                    </div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Product Analytics</div>
+                    <div class="sk-tags">
+                        <span class="chip chip-accent">PostHog</span>
+                        <span class="chip">HubSpot</span>
+                        <span class="chip">Langfuse</span>
+                        <span class="chip">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects / Impact -->
+        <section id="projects" class="section">
+            <div class="section-head">
+                <div class="section-tag">04 · IMPACT</div>
+                <h2 class="section-title">Selected work</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="card project-card">
+                    <div class="proj-head">
+                        <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+                        <div class="proj-title">Customer Churn Prediction</div>
+                    </div>
+                    <div class="proj-meta">PYTHON · DBT · SCIKIT-LEARN</div>
+                    <p class="proj-desc">End-to-end churn prediction framework — from problem framing through dbt feature engineering, scikit-learn modeling, and evaluation. Helped flag at-risk customers for proactive intervention.</p>
+                    <div class="proj-stats">
+                        <div class="ps-item">
+                            <div class="ps-value">75%</div>
+                            <div class="ps-label">churn ↓</div>
+                        </div>
+                        <div class="ps-item">
+                            <div class="ps-value">E2E</div>
+                            <div class="ps-label">pipeline</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <div class="proj-head">
+                        <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></div>
+                        <div class="proj-title">Self-Service BI Layer</div>
+                    </div>
+                    <div class="proj-meta">METABASE · SQL · DBT</div>
+                    <p class="proj-desc">Translated recurring product, commercial and CRM questions into a Metabase dashboard suite — eliminating manual reporting and putting answers one click away from the people who needed them.</p>
+                    <div class="proj-stats">
+                        <div class="ps-item">
+                            <div class="ps-value">3</div>
+                            <div class="ps-label">teams served</div>
+                        </div>
+                        <div class="ps-item">
+                            <div class="ps-value">0</div>
+                            <div class="ps-label">manual KPI reports</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <div class="proj-head">
+                        <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></div>
+                        <div class="proj-title">Feature Adoption Analytics</div>
+                    </div>
+                    <div class="proj-meta">POSTHOG · PYTHON · SQL</div>
+                    <p class="proj-desc">Analyzed user behavior across the platform and shipped a feature adoption dashboard that surfaced low-engagement features — directly informing product decisions to lift adoption.</p>
+                    <div class="proj-stats">
+                        <div class="ps-item">
+                            <div class="ps-value">↑</div>
+                            <div class="ps-label">adoption</div>
+                        </div>
+                        <div class="ps-item">
+                            <div class="ps-value">PRD</div>
+                            <div class="ps-label">decisions informed</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <div class="proj-head">
+                        <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+                        <div class="proj-title">RevOps ELT Pipeline</div>
+                    </div>
+                    <div class="proj-meta">DBT · SQL SERVER · JINJA2</div>
+                    <p class="proj-desc">Designed scalable ELT pipelines feeding the company's Revenue Operations model — supporting revenue tracking, forecasting and downstream analytics across the funnel.</p>
+                    <div class="proj-stats">
+                        <div class="ps-item">
+                            <div class="ps-value">∞</div>
+                            <div class="ps-label">scalable</div>
+                        </div>
+                        <div class="ps-item">
+                            <div class="ps-value">RevOps</div>
+                            <div class="ps-label">domain</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <div class="proj-head">
+                        <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                        <div class="proj-title">Customer Data Model</div>
+                    </div>
+                    <div class="proj-meta">SQL SERVER · DATA MODELING</div>
+                    <p class="proj-desc">Worked directly with the CTO to design a comprehensive customer data model, improving the organization's ability to analyze platform data and inform strategic decisions.</p>
+                    <div class="proj-stats">
+                        <div class="ps-item">
+                            <div class="ps-value">CTO</div>
+                            <div class="ps-label">collaboration</div>
+                        </div>
+                        <div class="ps-item">
+                            <div class="ps-value">Org-wide</div>
+                            <div class="ps-label">impact</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card">
+                    <div class="proj-head">
+                        <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6"/><path d="M12 16v6"/><path d="M2 12h6"/><path d="M16 12h6"/><circle cx="12" cy="12" r="4"/></svg></div>
+                        <div class="proj-title">Sustainability Measure Structures</div>
+                    </div>
+                    <div class="proj-meta">ESRS · GHG · GRI</div>
+                    <p class="proj-desc">Implemented scalable measure structures for sustainability data tracking aligned with ESRS, GHG Protocol and GRI frameworks — the data backbone of an ESG platform.</p>
+                    <div class="proj-stats">
+                        <div class="ps-item">
+                            <div class="ps-value">3</div>
+                            <div class="ps-label">frameworks</div>
+                        </div>
+                        <div class="ps-item">
+                            <div class="ps-value">ESG</div>
+                            <div class="ps-label">domain</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="section-head">
+                <div class="section-tag">05 · EDUCATION</div>
+                <h2 class="section-title">Academic foundation</h2>
+            </div>
+
+            <div class="edu-grid">
+                <div class="card edu-card">
+                    <div class="edu-period">2022 — 2024</div>
+                    <div class="edu-degree">M.Sc. Data Science</div>
+                    <div class="edu-school">Uppsala University, Sweden</div>
+                    <div class="edu-courses">
+                        <span class="chip">Statistical Learning</span>
+                        <span class="chip">Experimental Design</span>
+                        <span class="chip">Machine Learning</span>
+                        <span class="chip">Big Data Systems</span>
+                    </div>
+                </div>
+                <div class="card edu-card">
+                    <div class="edu-period">2017 — 2021</div>
+                    <div class="edu-degree">B.Sc. Computer Science</div>
+                    <div class="edu-school">Government Engineering College Thrissur, Kerala, India</div>
+                </div>
+            </div>
+
+            <div class="section-head" style="margin-top: 2rem;">
+                <div class="section-tag">CERTIFICATIONS</div>
+            </div>
+            <div class="cert-grid">
+                <div class="card cert-card">
+                    <div class="cert-issuer">COURSERA</div>
+                    <div class="cert-name">Foundations of AI and Machine Learning</div>
+                </div>
+                <div class="card cert-card">
+                    <div class="cert-issuer">COURSERA</div>
+                    <div class="cert-name">Big Data Modeling and Management Systems</div>
+                </div>
+                <div class="card cert-card">
+                    <div class="cert-issuer">COURSERA</div>
+                    <div class="cert-name">Machine Learning with Big Data</div>
+                </div>
+                <div class="card cert-card">
+                    <div class="cert-issuer">UDEMY</div>
+                    <div class="cert-name">Tableau 2022 — Data Science from Zero to Hero</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="section-head">
+                <div class="section-tag">06 · CONTACT</div>
+                <h2 class="section-title">Let's talk data</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="card contact-main">
+                    <h3 class="contact-headline">Have a problem worth solving with data?</h3>
+                    <p class="contact-sub">Whether it's a churn signal you can't pin down, a metric that doesn't trend the way it should, or a dashboard you wish you had — I'd love to hear about it.</p>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="mailto:sarathperingayisuresh@gmail.com">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                            <span>sarathperingayisuresh@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card contact-side">
+                    <div class="cs-row">
+                        <span class="cs-label">LOC</span>
+                        <span class="cs-value">Stockholm, SE</span>
+                    </div>
+                    <div class="cs-row">
+                        <span class="cs-label">TZ</span>
+                        <span class="cs-value">Europe/Stockholm</span>
+                    </div>
+                    <div class="cs-row">
+                        <span class="cs-label">RESP</span>
+                        <span class="cs-value">&lt; 24h</span>
+                    </div>
+                    <div class="cs-row">
+                        <span class="cs-label">STATUS</span>
+                        <span class="cs-value cs-online"><span class="cs-pulse"></span>Open for challenges</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div>© <span id="year"></span> Sarath Peringayi Suresh · Built with data in mind.</div>
+            <div class="footer-meta"><span class="cursor-block"></span> v1.0</div>
+        </footer>
+    </main>
+</body>
+</html>
