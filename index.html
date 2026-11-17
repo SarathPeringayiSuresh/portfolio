@@ -7,343 +7,55 @@
     <meta name="description" content="Sarath Peringayi Suresh — Data Scientist based in Stockholm. Applied AI, statistical analysis and full-stack data products at Position Green." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Animated grid background -->
-    <div class="bg-grid"></div>
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-
-    <!-- Mobile drawer backdrop -->
-    <div class="drawer-backdrop" hidden></div>
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="brand">
-            <div class="brand-mark">
-                <span class="brand-dot"></span>
-                <span class="brand-pulse"></span>
-            </div>
-            <div class="brand-text">
-                <div class="brand-name">SPS</div>
-                <div class="brand-sub">data.lab</div>
-            </div>
-        </div>
-
-        <nav class="nav" id="primary-nav">
-            <a href="#overview" class="nav-link active" data-section="overview">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
-                <span>Overview</span>
-            </a>
-            <a href="#about" class="nav-link" data-section="about">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-                <span>About</span>
-            </a>
-            <a href="#experience" class="nav-link" data-section="experience">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
-                <span>Experience</span>
-            </a>
-            <a href="#skills" class="nav-link" data-section="skills">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="6"/></svg>
-                <span>Skills</span>
-            </a>
-            <a href="#projects" class="nav-link" data-section="projects">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
-                <span>Projects</span>
-            </a>
-            <a href="#education" class="nav-link" data-section="education">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v6c0 1 3 3 6 3s6-2 6-3v-6"/></svg>
-                <span>Education</span>
-            </a>
-            <a href="#contact" class="nav-link" data-section="contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-                <span>Contact</span>
-            </a>
-        </nav>
-
-        <div class="sidebar-footer">
-            <div class="status-dot">
-                <span class="status-pulse"></span>
-                <span>Employed · open for new challenges</span>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Main content -->
-    <main class="main">
-        <!-- Top bar -->
-        <header class="topbar">
-            <div class="topbar-left">
-                <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
-                    <span></span><span></span><span></span>
-                </button>
-                <div class="breadcrumb">
-                    <span>~/</span><span class="bc-current">portfolio</span><span class="cursor">_</span>
-                </div>
-            </div>
-            <div class="topbar-right">
-                <div class="topbar-stat">
-                    <span class="stat-label">LIVE</span>
-                    <span class="stat-dot"></span>
-                </div>
-                <div class="topbar-stat">
-                    <span class="stat-label">STOCKHOLM</span>
-                    <span class="stat-value" id="local-time">--:--</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Overview / Hero -->
-        <section id="overview" class="section hero">
-            <div class="hero-grid">
-                <div class="hero-intro">
-                    <div class="tag">
-                        <span class="tag-dot"></span>
-                        <span>DATA SCIENTIST · STOCKHOLM, SE</span>
-                    </div>
-                    <h1 class="hero-title">
-                        Turning <span class="gradient-text">data</span><br />
-                        into <span class="gradient-text-2">business growth</span>.
-                    </h1>
-                    <p class="hero-subtitle">
-                        I build data products people can act on — from AI agents that audit ESG data to customer health tools and statistical research that guides product decisions.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>View impact</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-                        </a>
-                        <a href="#contact" class="btn btn-ghost">
-                            <span>Get in touch</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-terminal">
-                    <div class="terminal-head">
-                        <span class="t-dot t-red"></span>
-                        <span class="t-dot t-yellow"></span>
-                        <span class="t-dot t-green"></span>
-                        <span class="t-title">~/sarath — zsh</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
-                        <div class="t-line t-out">sarath_peringayi_suresh</div>
-                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat role.json</span></div>
-                        <div class="t-line t-out">{</div>
-                        <div class="t-line t-out">  "title": "Data Scientist",</div>
-                        <div class="t-line t-out">  "company": "Position Green",</div>
-                        <div class="t-line t-out">  "location": "Stockholm, SE",</div>
-                        <div class="t-line t-out">  "stack": ["Python", "SQL", "TypeScript", "React"],</div>
-                        <div class="t-line t-out">  "focus": "Applied AI · Analytics · Data Products"</div>
-                        <div class="t-line t-out">}</div>
-                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd t-blink">_</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Metrics from the recent project write-ups -->
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <div class="kpi-head"><span class="kpi-label">RECENT PROJECTS</span></div>
-                    <div class="kpi-value"><span class="counter" data-target="4">4</span><span class="kpi-unit"></span></div>
-                    <p class="card-meta">AI · analytics · full-stack</p>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-head"><span class="kpi-label">ACCOUNTS · HEALTH CONSOLE</span></div>
-                    <div class="kpi-value"><span class="counter" data-target="560">560</span><span class="kpi-unit"></span></div>
-                    <p class="card-meta">Validated against warehouse data</p>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-head"><span class="kpi-label">ANOMALY SCAN · LESS MEMORY</span></div>
-                    <div class="kpi-value"><span class="counter" data-target="72">72</span><span class="kpi-unit">%</span></div>
-                    <p class="card-meta">1,123 → 311 MiB on 232k answers</p>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-head"><span class="kpi-label">NPS STUDY · DATA SOURCES</span></div>
-                    <div class="kpi-value"><span class="counter" data-target="12">12</span><span class="kpi-unit"></span></div>
-                    <p class="card-meta">Joined at user and customer level</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="section-head">
-                <div class="section-tag">01 · ABOUT</div>
-                <h2 class="section-title">From analysis to working products</h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="card about-card">
-                    <div class="card-head">
-                        <span class="card-title">profile.md</span>
-                        <span class="card-meta">UPDATED · 2026</span>
-                    </div>
-                    <div class="card-body">
-                        <p>
-                            I'm a <strong>Data Scientist</strong> based in Stockholm with a Master's in Data Science from Uppsala University and 2+ years of hands-on experience building analytics, applied AI and full-stack data products at <strong>Position Green</strong>.
-                        </p>
-                        <p>
-                            My work sits at the intersection of <em>product, engineering and the business</em> — framing questions with stakeholders, connecting messy data, testing the evidence, and shipping tools that fit the way teams work.
-                        </p>
-                        <p>
-                            Recent work includes a customer health console, an MCP release service, an NPS research pipeline and an AI skill for ESG data review. I build in validation, human review and production feedback so teams can understand and trust the results.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="about-side">
-                    <div class="card mini-card">
-                        <div class="mini-label">LOCATION</div>
-                        <div class="mini-value">Stockholm, Sweden</div>
-                    </div>
-                    <div class="card mini-card">
-                        <div class="mini-label">FOCUS</div>
-                        <div class="mini-value">Applied AI · Analytics · Data Products</div>
-                    </div>
-                    <div class="card mini-card">
-                        <div class="mini-label">LANGUAGES</div>
-                        <div class="mini-value">EN · ML · HI</div>
-                    </div>
-                    <div class="card mini-card">
-                        <div class="mini-label">STATUS</div>
-                        <div class="mini-value mini-online">
-                            <span class="mini-pulse"></span> Employed · open for new challenges
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section id="experience" class="section">
-            <div class="section-head">
-                <div class="section-tag">02 · EXPERIENCE</div>
-                <h2 class="section-title">Track record</h2>
-            </div>
-
-            <div class="timeline">
-                <div class="t-item">
-                    <div class="t-marker"><span></span></div>
-                    <div class="card t-card">
-                        <div class="t-card-head">
-                            <div>
-                                <div class="t-role">Data Scientist</div>
-                                <div class="t-company">Position Green · Stockholm</div>
-                            </div>
-                            <div class="t-period">Aug 2024 — Present</div>
-                        </div>
-                        <ul class="t-bullets">
-                            <li><strong>Customer Health Console</strong> — shipped a FastAPI and React app in about three weeks, bringing product usage, support, CRM and releases into one view with role-based access and weekday briefs.</li>
-                            <li><strong>Data Anomaly Finder</strong> — built and benchmarked an AI agent skill for ESG data review; reduced peak scan memory by 72% and eliminated 217 false critical/high unit flags in the benchmark while retaining planted errors.</li>
-                            <li><strong>Customer-Relevant Releases MCP</strong> — built a TypeScript pipeline and read-only MCP/JSON service with evidence-backed AI tagging, deterministic de-duplication and human-reviewed feedback links.</li>
-                            <li><strong>NPS and product-usage research</strong> — joined 12 sources, tested about 30 hypotheses with uncertainty estimates and multiple-comparison correction, and automated a weekly dashboard refresh.</li>
-                            <li><strong>Data foundations</strong> — built self-service Metabase reporting, feature adoption analytics and dbt pipelines for Revenue Operations.</li>
-                        </ul>
-                        <div class="t-tags"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">SQL</span><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">MCP</span><span class="chip">dbt</span><span class="chip">Langfuse</span></div>
-                    </div>
-                </div>
-
-                <div class="t-item">
-                    <div class="t-marker"><span></span></div>
-                    <div class="card t-card">
-                        <div class="t-card-head">
-                            <div>
-                                <div class="t-role">Platform Onboarding Analyst <span class="t-pill">Intern</span></div>
-                                <div class="t-company">Position Green · Stockholm</div>
-                            </div>
-                            <div class="t-period">Oct 2023 — Jun 2024</div>
-                        </div>
-                        <ul class="t-bullets">
-                            <li>Designed a comprehensive <strong>customer data model</strong> with the CTO, improving the org's ability to analyze platform data.</li>
-                            <li>Implemented scalable measure structures for sustainability data aligned with <span class="hl">ESRS, GHG Protocol & GRI</span> frameworks.</li>
-                        </ul>
-                        <div class="t-tags">
-                            <span class="chip">Data Modeling</span>
-                            <span class="chip">SQL Server</span>
-                            <span class="chip">ESG</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-            <div class="section-head">
-                <div class="section-tag">03 · SKILLS</div>
-                <h2 class="section-title">The toolkit</h2>
-            </div>
-
-            <p class="hero-subtitle">Tools and methods used across recent projects and my work at Position Green.</p>
-            <div class="skills-categories">
-                <div class="card sk-card">
-                    <div class="sk-head">Languages &amp; Querying</div>
-                    <div class="sk-tags"><span class="chip">Python</span><span class="chip">SQL / T-SQL</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Bash</span></div>
-                </div>
-                <div class="card sk-card">
-                    <div class="sk-head">Applied AI &amp; Evaluation</div>
-                    <div class="sk-tags"><span class="chip">Claude agent skills</span><span class="chip">Model Context Protocol</span><span class="chip">OpenAI structured outputs</span><span class="chip">Evidence-grounded classification</span><span class="chip">Human-in-the-loop review</span><span class="chip">Langfuse</span><span class="chip">LLM-as-a-judge</span></div>
-                </div>
-                <div class="card sk-card">
-                    <div class="sk-head">Statistics &amp; Machine Learning</div>
-                    <div class="sk-tags"><span class="chip">pandas</span><span class="chip">SciPy</span><span class="chip">statsmodels</span><span class="chip">scikit-learn</span><span class="chip">SHAP</span><span class="chip">Bootstrap &amp; permutation tests</span><span class="chip">Mixed-effects models</span><span class="chip">Multiple-comparison correction</span></div>
-                </div>
-                <div class="card sk-card">
-                    <div class="sk-head">Data Engineering &amp; Quality</div>
-                    <div class="sk-tags"><span class="chip">dbt</span><span class="chip">DuckDB</span><span class="chip">Parquet</span><span class="chip">SQL Server</span><span class="chip">Postgres</span><span class="chip">SQLite</span><span class="chip">Entity resolution</span><span class="chip">Deterministic data checks</span></div>
-                </div>
-                <div class="card sk-card">
-                    <div class="sk-head">Full-Stack &amp; Deployment</div>
-                    <div class="sk-tags"><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">SQLAlchemy</span><span class="chip">REST APIs</span><span class="chip">Google OAuth</span><span class="chip">Role-based access</span><span class="chip">Docker</span><span class="chip">Render</span><span class="chip">Git</span></div>
-                </div>
-                <div class="card sk-card">
-                    <div class="sk-head">Analytics &amp; Communication</div>
-                    <div class="sk-tags"><span class="chip">Metabase</span><span class="chip">Userpilot</span><span class="chip">PostHog</span><span class="chip">HubSpot</span><span class="chip">Reproducible notebooks</span><span class="chip">Stakeholder discovery</span><span class="chip">Evidence-graded insights</span><span class="chip">Automated reporting</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects / Impact -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="#overview" aria-label="Sarath Peringayi Suresh home">SPS<span class="brand-dot">.</span></a><nav id="primary-nav" aria-label="Main navigation"><a href="#projects" class="nav-link" data-section="projects">Work</a><a href="#approach" class="nav-link" data-section="approach">Approach</a><a href="#about" class="nav-link" data-section="about">About</a><a href="#contact" class="nav-link" data-section="contact">Contact</a></nav><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button></header>
+<main id="main">
+<section id="overview" class="hero section">
+<div class="hero-grid"><div class="hero-intro"><div class="eyebrow">SARATH PERINGAYI SURESH / DATA SCIENTIST</div><h1>From scattered<br class="desktop-break"> signals to decisions<br class="desktop-break"> you can <em>trust.</em></h1><p class="hero-subtitle">Applied AI, analytics and data products.</p><p class="hero-description">I connect messy data, test the evidence, and build tools that help people act with confidence.</p><div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore the work <span aria-hidden="true">↗</span></a><span class="location"><span class="status-dot"></span> Stockholm, SE <span id="local-time"></span></span></div></div>
+<div class="engine"><div class="engine-caption"><span>FIG. 01 / THE EVIDENCE ENGINE</span><span>EXPLORE THE LAYERS ↓</span></div><svg class="flow-graph" viewBox="0 0 680 510" role="img" aria-labelledby="flow-title flow-desc"><title id="flow-title">From scattered signals to clear decisions</title><desc id="flow-desc">Conceptual data flow: many source nodes converge through checks and interpretation into actionable outputs. Select a stage below to explore the approach.</desc><defs><radialGradient id="node"><stop stop-color="#e9edff"/><stop offset=".4" stop-color="#00e5ff"/><stop offset="1" stop-color="#00899a"/></radialGradient><linearGradient id="flow-color" x2="0" y2="1"><stop stop-color="#8893b8"/><stop offset=".55" stop-color="#00e5ff"/><stop offset="1" stop-color="#00ffa3"/></linearGradient></defs><g class="graph-grid"><path d="M30 115 L500 115 L440 57 L90 57 Z"/><path d="M77 115 L125 57"/><path d="M124 115 L160 57"/><path d="M171 115 L195 57"/><path d="M218 115 L230 57"/><path d="M265 115 L265 57"/><path d="M312 115 L300 57"/><path d="M359 115 L335 57"/><path d="M406 115 L370 57"/><path d="M453 115 L405 57"/><path d="M80 75 H450"/><path d="M60 95 H470"/></g><g class="graph-grid"><path d="M30 235 L500 235 L440 177 L90 177 Z"/><path d="M77 235 L125 177"/><path d="M124 235 L160 177"/><path d="M171 235 L195 177"/><path d="M218 235 L230 177"/><path d="M265 235 L265 177"/><path d="M312 235 L300 177"/><path d="M359 235 L335 177"/><path d="M406 235 L370 177"/><path d="M453 235 L405 177"/><path d="M80 195 H450"/><path d="M60 215 H470"/></g><g class="graph-grid"><path d="M30 355 L500 355 L440 297 L90 297 Z"/><path d="M77 355 L125 297"/><path d="M124 355 L160 297"/><path d="M171 355 L195 297"/><path d="M218 355 L230 297"/><path d="M265 355 L265 297"/><path d="M312 355 L300 297"/><path d="M359 355 L335 297"/><path d="M406 355 L370 297"/><path d="M453 355 L405 297"/><path d="M80 315 H450"/><path d="M60 335 H470"/></g><g class="graph-grid"><path d="M30 475 L500 475 L440 417 L90 417 Z"/><path d="M77 475 L125 417"/><path d="M124 475 L160 417"/><path d="M171 475 L195 417"/><path d="M218 475 L230 417"/><path d="M265 475 L265 417"/><path d="M312 475 L300 417"/><path d="M359 475 L335 417"/><path d="M406 475 L370 417"/><path d="M453 475 L405 417"/><path d="M80 435 H450"/><path d="M60 455 H470"/></g><g class="flow-links flow-layer" data-layer="0"><path d="M86.0 85.0 C86.0 152.0 86.0 145.0 86.0 205.0"/><path d="M94.97 101.41 C94.97 168.41 117.82 152.79 117.82 212.79"/><path d="M103.95 63.14 C103.95 130.14 149.64 141.46 149.64 201.46"/><path d="M112.92 97.73 C112.92 164.73000000000002 181.45 138.82 181.45 198.82"/><path d="M121.9 89.9 C121.9 156.9 213.27 151.35 213.27 211.35"/><path d="M130.87 65.74 C130.87 132.74 245.09 148.3 245.09 208.3"/><path d="M139.85 105.76 C139.85 172.76 276.91 137.15 276.91 197.15"/><path d="M148.82 76.59 C148.82 143.59 308.73 145.27 308.73 205.27"/><path d="M157.79 75.44 C157.79 142.44 340.55 152.73 340.55 212.73"/><path d="M166.77 106.15 C166.77 173.15 372.36 141.22 372.36 201.22"/><path d="M175.74 66.38 C175.74 133.38 404.18 138.99 404.18 198.99"/><path d="M184.72 88.66 C184.72 155.66 436.0 151.51 436.0 211.51"/><path d="M193.69 98.74 C193.69 165.74 86.0 145.0 86.0 205.0"/><path d="M202.67 63.03 C202.67 130.03 117.82 152.79 117.82 212.79"/><path d="M211.64 100.54 C211.64 167.54000000000002 149.64 141.46 149.64 201.46"/><path d="M220.62 86.26 C220.62 153.26 181.45 138.82 181.45 198.82"/><path d="M229.59 67.78 C229.59 134.78 213.27 151.35 213.27 211.35"/><path d="M238.56 106.68 C238.56 173.68 245.09 148.3 245.09 208.3"/><path d="M247.54 73.33 C247.54 140.32999999999998 276.91 137.15 276.91 197.15"/><path d="M256.51 78.87 C256.51 145.87 308.73 145.27 308.73 205.27"/><path d="M265.49 104.84 C265.49 171.84 340.55 152.73 340.55 212.73"/><path d="M274.46 64.69 C274.46 131.69 372.36 141.22 372.36 201.22"/><path d="M283.44 92.22 C283.44 159.22 404.18 138.99 404.18 198.99"/><path d="M292.41 95.68 C292.41 162.68 436.0 151.51 436.0 211.51"/><path d="M301.38 63.54 C301.38 130.54 86.0 145.0 86.0 205.0"/><path d="M310.36 102.91 C310.36 169.91 117.82 152.79 117.82 212.79"/><path d="M319.33 82.59 C319.33 149.59 149.64 141.46 149.64 201.46"/><path d="M328.31 70.3 C328.31 137.3 181.45 138.82 181.45 198.82"/><path d="M337.28 107.0 C337.28 174.0 213.27 151.35 213.27 211.35"/><path d="M346.26 70.39 C346.26 137.39 245.09 148.3 245.09 208.3"/><path d="M355.23 82.47 C355.23 149.47 276.91 137.15 276.91 197.15"/><path d="M364.21 102.98 C364.21 169.98000000000002 308.73 145.27 308.73 205.27"/><path d="M373.18 63.57 C373.18 130.57 340.55 152.73 340.55 212.73"/><path d="M382.15 95.58 C382.15 162.57999999999998 372.36 141.22 372.36 201.22"/><path d="M391.13 92.33 C391.13 159.32999999999998 404.18 138.99 404.18 198.99"/><path d="M400.1 64.65 C400.1 131.65 436.0 151.51 436.0 211.51"/><path d="M409.08 104.79 C409.08 171.79000000000002 86.0 145.0 86.0 205.0"/><path d="M418.05 78.98 C418.05 145.98000000000002 117.82 152.79 117.82 212.79"/><path d="M427.03 73.23 C427.03 140.23000000000002 149.64 141.46 149.64 201.46"/><path d="M436.0 106.7 C436.0 173.7 181.45 138.82 181.45 198.82"/></g><g class="flow-links flow-layer" data-layer="1"><path d="M86.0 205.0 C86.0 272.0 86.0 265.0 86.0 325.0"/><path d="M117.82 212.79 C117.82 279.78999999999996 173.5 272.79 173.5 332.79"/><path d="M149.64 201.46 C149.64 268.46000000000004 261.0 261.46 261.0 321.46"/><path d="M181.45 198.82 C181.45 265.82 348.5 258.82 348.5 318.82"/><path d="M213.27 211.35 C213.27 278.35 436.0 271.35 436.0 331.35"/><path d="M245.09 208.3 C245.09 275.3 86.0 265.0 86.0 325.0"/><path d="M276.91 197.15 C276.91 264.15 173.5 272.79 173.5 332.79"/><path d="M308.73 205.27 C308.73 272.27 261.0 261.46 261.0 321.46"/><path d="M340.55 212.73 C340.55 279.73 348.5 258.82 348.5 318.82"/><path d="M372.36 201.22 C372.36 268.22 436.0 271.35 436.0 331.35"/><path d="M404.18 198.99 C404.18 265.99 86.0 265.0 86.0 325.0"/><path d="M436.0 211.51 C436.0 278.51 173.5 272.79 173.5 332.79"/></g><g class="flow-links flow-layer" data-layer="2"><path d="M86.0 325.0 C86.0 392.0 86.0 385.0 86.0 445.0"/><path d="M173.5 332.79 C173.5 399.79 117.82 392.79 117.82 452.79"/><path d="M261.0 321.46 C261.0 388.46 149.64 381.46 149.64 441.46"/><path d="M348.5 318.82 C348.5 385.82 181.45 378.82 181.45 438.82"/><path d="M436.0 331.35 C436.0 398.35 213.27 391.35 213.27 451.35"/><path d="M86 325 C86 392 245.09 388.3 245.09 448.3"/><path d="M173.5 332.79 C173.5 399.79 276.91 377.15 276.91 437.15"/><path d="M261 321.46 C261 388.46 308.73 385.27 308.73 445.27"/><path d="M348.5 318.82 C348.5 385.82 340.55 392.73 340.55 452.73"/><path d="M436 331.35 C436 398.35 372.36 381.22 372.36 441.22"/><path d="M86 325 C86 392 404.18 378.99 404.18 438.99"/><path d="M173.5 332.79 C173.5 399.79 436.0 391.51 436.0 451.51"/></g><g class="flow-nodes flow-layer" data-layer="0"><circle cx="86.0" cy="85.0" r="2.4" fill="url(#node)"/><circle cx="94.97" cy="101.41" r="2.4" fill="url(#node)"/><circle cx="103.95" cy="63.14" r="2.4" fill="url(#node)"/><circle cx="112.92" cy="97.73" r="2.4" fill="url(#node)"/><circle cx="121.9" cy="89.9" r="2.4" fill="url(#node)"/><circle cx="130.87" cy="65.74" r="2.4" fill="url(#node)"/><circle cx="139.85" cy="105.76" r="2.4" fill="url(#node)"/><circle cx="148.82" cy="76.59" r="2.4" fill="url(#node)"/><circle cx="157.79" cy="75.44" r="2.4" fill="url(#node)"/><circle cx="166.77" cy="106.15" r="2.4" fill="url(#node)"/><circle cx="175.74" cy="66.38" r="2.4" fill="url(#node)"/><circle cx="184.72" cy="88.66" r="2.4" fill="url(#node)"/><circle cx="193.69" cy="98.74" r="2.4" fill="url(#node)"/><circle cx="202.67" cy="63.03" r="2.4" fill="url(#node)"/><circle cx="211.64" cy="100.54" r="2.4" fill="url(#node)"/><circle cx="220.62" cy="86.26" r="2.4" fill="url(#node)"/><circle cx="229.59" cy="67.78" r="2.4" fill="url(#node)"/><circle cx="238.56" cy="106.68" r="2.4" fill="url(#node)"/><circle cx="247.54" cy="73.33" r="2.4" fill="url(#node)"/><circle cx="256.51" cy="78.87" r="2.4" fill="url(#node)"/><circle cx="265.49" cy="104.84" r="2.4" fill="url(#node)"/><circle cx="274.46" cy="64.69" r="2.4" fill="url(#node)"/><circle cx="283.44" cy="92.22" r="2.4" fill="url(#node)"/><circle cx="292.41" cy="95.68" r="2.4" fill="url(#node)"/><circle cx="301.38" cy="63.54" r="2.4" fill="url(#node)"/><circle cx="310.36" cy="102.91" r="2.4" fill="url(#node)"/><circle cx="319.33" cy="82.59" r="2.4" fill="url(#node)"/><circle cx="328.31" cy="70.3" r="2.4" fill="url(#node)"/><circle cx="337.28" cy="107.0" r="2.4" fill="url(#node)"/><circle cx="346.26" cy="70.39" r="2.4" fill="url(#node)"/><circle cx="355.23" cy="82.47" r="2.4" fill="url(#node)"/><circle cx="364.21" cy="102.98" r="2.4" fill="url(#node)"/><circle cx="373.18" cy="63.57" r="2.4" fill="url(#node)"/><circle cx="382.15" cy="95.58" r="2.4" fill="url(#node)"/><circle cx="391.13" cy="92.33" r="2.4" fill="url(#node)"/><circle cx="400.1" cy="64.65" r="2.4" fill="url(#node)"/><circle cx="409.08" cy="104.79" r="2.4" fill="url(#node)"/><circle cx="418.05" cy="78.98" r="2.4" fill="url(#node)"/><circle cx="427.03" cy="73.23" r="2.4" fill="url(#node)"/><circle cx="436.0" cy="106.7" r="2.4" fill="url(#node)"/></g><g class="flow-nodes flow-layer" data-layer="1"><circle cx="86.0" cy="205.0" r="4" fill="url(#node)"/><circle cx="117.82" cy="212.79" r="4" fill="url(#node)"/><circle cx="149.64" cy="201.46" r="4" fill="url(#node)"/><circle cx="181.45" cy="198.82" r="4" fill="url(#node)"/><circle cx="213.27" cy="211.35" r="4" fill="url(#node)"/><circle cx="245.09" cy="208.3" r="4" fill="url(#node)"/><circle cx="276.91" cy="197.15" r="4" fill="url(#node)"/><circle cx="308.73" cy="205.27" r="4" fill="url(#node)"/><circle cx="340.55" cy="212.73" r="4" fill="url(#node)"/><circle cx="372.36" cy="201.22" r="4" fill="url(#node)"/><circle cx="404.18" cy="198.99" r="4" fill="url(#node)"/><circle cx="436.0" cy="211.51" r="4" fill="url(#node)"/></g><g class="flow-nodes flow-layer" data-layer="2"><circle cx="86.0" cy="325.0" r="4" fill="url(#node)"/><circle cx="173.5" cy="332.79" r="4" fill="url(#node)"/><circle cx="261.0" cy="321.46" r="4" fill="url(#node)"/><circle cx="348.5" cy="318.82" r="4" fill="url(#node)"/><circle cx="436.0" cy="331.35" r="4" fill="url(#node)"/></g><g class="flow-nodes flow-layer" data-layer="3"><circle cx="86.0" cy="445.0" r="4" fill="#00ffa3"/><circle cx="117.82" cy="452.79" r="4" fill="#00ffa3"/><circle cx="149.64" cy="441.46" r="4" fill="#00ffa3"/><circle cx="181.45" cy="438.82" r="4" fill="#00ffa3"/><circle cx="213.27" cy="451.35" r="4" fill="#00ffa3"/><circle cx="245.09" cy="448.3" r="4" fill="#00ffa3"/><circle cx="276.91" cy="437.15" r="4" fill="#00ffa3"/><circle cx="308.73" cy="445.27" r="4" fill="#00ffa3"/><circle cx="340.55" cy="452.73" r="4" fill="#00ffa3"/><circle cx="372.36" cy="441.22" r="4" fill="#00ffa3"/><circle cx="404.18" cy="438.99" r="4" fill="#00ffa3"/><circle cx="436.0" cy="451.51" r="4" fill="#00ffa3"/></g><g class="graph-label"><path d="M485 85 H518"/><text x="530" y="89">SOURCES</text></g><g class="graph-label"><path d="M485 205 H518"/><text x="530" y="209">CHECKS</text></g><g class="graph-label"><path d="M485 325 H518"/><text x="530" y="329">INTERPRETATION</text></g><g class="graph-label"><path d="M485 445 H518"/><text x="530" y="449">ACTION</text></g></svg>
+<div class="stage-controls" role="group" aria-label="Explore the evidence engine"><button type="button" class="stage-button" data-stage="0" aria-pressed="true"><span>01</span> Sources</button><button type="button" class="stage-button" data-stage="1" aria-pressed="false"><span>02</span> Checks</button><button type="button" class="stage-button" data-stage="2" aria-pressed="false"><span>03</span> Interpretation</button><button type="button" class="stage-button" data-stage="3" aria-pressed="false"><span>04</span> Action</button></div><p class="stage-description" id="stage-description" aria-live="polite">Connect product, support, CRM and feedback data. Start with the source, not the assumption.</p></div></div>
+<div class="hero-footnote"><span>POSITION GREEN / APPLIED AI + DATA SCIENCE</span><a href="#projects">SELECTED WORK, 2026 <span aria-hidden="true">↓</span></a></div>
+</section>
         <section id="projects" class="section">
             <div class="section-head">
-                <div class="section-tag">04 · IMPACT</div>
+                <div class="section-tag">01 / SELECTED WORK</div>
                 <h2 class="section-title">Selected work</h2>
             </div>
 
-            <p class="hero-subtitle">Recent work at Position Green · Applied AI, customer intelligence and analytics.</p>
+            <p class="hero-subtitle">Applied AI, customer intelligence and analytics. Built at Position Green.</p>
             <div class="projects-grid recent-projects">
-                <article class="card project-card" id="customer-health-console">
-                    <div class="proj-head"><div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div><h3 class="proj-title">Customer Health Console</h3></div>
-                    <div class="proj-meta">PYTHON · FASTAPI · REACT · POSTGRES</div>
-                    <p class="proj-desc">A signed-in console that brings product health, feature usage, support, CRM and releases into daily CSM workflows. Includes peer-based adoption suggestions, an alert-rule editor, server-enforced access control and weekday email briefs.</p>
-                    <div class="proj-stats"><div class="ps-item"><div class="ps-value">560</div><div class="ps-label">accounts validated</div></div><div class="ps-item"><div class="ps-value">~3 weeks</div><div class="ps-label">to ship</div></div></div>
-                    <details class="project-details"><summary>Approach &amp; results</summary><p class="proj-desc">Validated recomputed metrics against all 31 warehouse summary rows, 341 module rows and 560 accounts. Labelled the score as product health risk after testing its weak relationship with downsell outcomes.</p></details>
-                </article>
-
-                <article class="card project-card" id="data-anomaly-finder">
-                    <div class="proj-head"><div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div><h3 class="proj-title">Data Anomaly Finder</h3></div>
-                    <div class="proj-meta">CLAUDE AGENT SKILLS · PYTHON · DUCKDB · LANGFUSE</div>
+                <article class="card project-card" id="data-anomaly-finder"><div class="project-index">01 / AI ENGINEERING</div>
+                    <div class="proj-head"><h3 class="proj-title">Data Anomaly Finder</h3></div>
+                    <figure class="project-graph"><svg viewBox="0 0 420 185" role="img" aria-labelledby="anomaly-title"><title id="anomaly-title">Illustrative anomaly detection time series with a highlighted outlier</title><g class="chart-grid"><path d="M25 25 H395"/><path d="M25 65 H395"/><path d="M25 105 H395"/><path d="M25 145 H395"/><path d="M25 25 V145"/><path d="M99 25 V145"/><path d="M173 25 V145"/><path d="M247 25 V145"/><path d="M321 25 V145"/><path d="M395 25 V145"/></g><path class="chart-band" d="M25 99 L60 92 95 101 130 85 165 94 200 75 235 83 270 50 290 68 305 92 340 83 375 97 395 88 V135 L375 143 340 129 305 138 290 114 270 96 235 129 200 121 165 140 130 131 95 147 60 138 25 145 Z"/><path class="chart-line" d="M25 122 C45 115 50 106 70 117 S100 129 120 113 S145 116 165 117 S185 94 205 102 S232 122 250 94 S263 21 276 30 S286 115 310 116 S334 99 351 110 S380 124 395 115"/><circle class="outlier" cx="272" cy="29" r="5"/><text class="chart-label" x="287" y="32">VERIFY</text></svg><figcaption>Conceptual illustration · not customer data</figcaption></figure><div class="proj-meta">CLAUDE AGENT SKILLS · PYTHON · DUCKDB · LANGFUSE</div>
                     <p class="proj-desc">An AI agent skill that audits ESG data before reporting. A deterministic scan runs about 20 checks; the model reviews context, groups root causes and returns ranked, linked issues for sustainability managers.</p>
                     <div class="proj-stats"><div class="ps-item"><div class="ps-value">72%</div><div class="ps-label">less peak scan memory</div></div><div class="ps-item"><div class="ps-value">5×</div><div class="ps-label">faster scan</div></div></div>
                     <details class="project-details"><summary>Approach &amp; results</summary><p class="proj-desc">On the 232k-answer benchmark, peak scan memory fell from 1,123 to 311 MiB and time from 11.0 to 2.1 seconds. Added a 1 GiB Docker benchmark harness and production feedback evaluation in Langfuse.</p></details>
                 </article>
 
-                <article class="card project-card" id="customer-releases-mcp">
-                    <div class="proj-head"><div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div><h3 class="proj-title">Customer-Relevant Releases MCP</h3></div>
-                    <div class="proj-meta">TYPESCRIPT · NODE.JS · MCP · SQLITE · OPENAI</div>
+                <article class="card project-card" id="customer-health-console"><div class="project-index">02 / FULL-STACK</div>
+                    <div class="proj-head"><h3 class="proj-title">Customer Health Console</h3></div>
+                    <figure class="project-graph"><svg viewBox="0 0 420 185" role="img" aria-labelledby="health-title"><title id="health-title">Illustrative usage, adoption and activity trends</title><g class="chart-grid"><path d="M25 25 H395"/><path d="M25 65 H395"/><path d="M25 105 H395"/><path d="M25 145 H395"/><path d="M25 25 V145"/><path d="M99 25 V145"/><path d="M173 25 V145"/><path d="M247 25 V145"/><path d="M321 25 V145"/><path d="M395 25 V145"/></g><path class="chart-line" d="M25 135 C70 130 65 95 110 105 S160 60 205 72 S250 40 290 51 S345 26 395 29"/><path class="chart-line secondary" d="M25 148 C75 149 85 122 125 126 S180 95 220 102 S290 75 330 83 S370 63 395 65"/><path class="chart-line tertiary" d="M25 155 C80 143 95 158 140 146 S200 150 240 135 S280 145 325 128 S370 130 395 115"/><text class="chart-label" x="25" y="178">USAGE / ADOPTION / ACTIVITY</text></svg><figcaption>Conceptual illustration · not customer data</figcaption></figure><div class="proj-meta">PYTHON · FASTAPI · REACT · POSTGRES</div>
+                    <p class="proj-desc">A signed-in console that brings product health, feature usage, support, CRM and releases into daily CSM workflows. Includes peer-based adoption suggestions, an alert-rule editor, server-enforced access control and weekday email briefs.</p>
+                    <div class="proj-stats"><div class="ps-item"><div class="ps-value">560</div><div class="ps-label">accounts validated</div></div><div class="ps-item"><div class="ps-value">~3 weeks</div><div class="ps-label">to ship</div></div></div>
+                    <details class="project-details"><summary>Approach &amp; results</summary><p class="proj-desc">Validated recomputed metrics against all 31 warehouse summary rows, 341 module rows and 560 accounts. Labelled the score as product health risk after testing its weak relationship with downsell outcomes.</p></details>
+                </article>
+
+                <article class="card project-card" id="customer-releases-mcp"><div class="project-index">03 / DATA SYSTEMS</div>
+                    <div class="proj-head"><h3 class="proj-title">Customer-Relevant Releases MCP</h3></div>
+                    <figure class="project-graph"><svg viewBox="0 0 420 185" role="img" aria-labelledby="release-title"><title id="release-title">Conceptual many-to-one release de-duplication graph</title><g class="chart-grid"><path d="M25 25 H395"/><path d="M25 65 H395"/><path d="M25 105 H395"/><path d="M25 145 H395"/><path d="M25 25 V145"/><path d="M99 25 V145"/><path d="M173 25 V145"/><path d="M247 25 V145"/><path d="M321 25 V145"/><path d="M395 25 V145"/></g><path class="chart-link" d="M35 35 C35 85 210 75 210 110"/><circle class="source-node" cx="35" cy="35" r="3"/><path class="chart-link" d="M79 35 C79 85 210 75 210 110"/><circle class="source-node" cx="79" cy="35" r="3"/><path class="chart-link" d="M123 35 C123 85 210 75 210 110"/><circle class="source-node" cx="123" cy="35" r="3"/><path class="chart-link" d="M167 35 C167 85 210 75 210 110"/><circle class="source-node" cx="167" cy="35" r="3"/><path class="chart-link" d="M211 35 C211 85 210 75 210 110"/><circle class="source-node" cx="211" cy="35" r="3"/><path class="chart-link" d="M255 35 C255 85 210 75 210 110"/><circle class="source-node" cx="255" cy="35" r="3"/><path class="chart-link" d="M299 35 C299 85 210 75 210 110"/><circle class="source-node" cx="299" cy="35" r="3"/><path class="chart-link" d="M343 35 C343 85 210 75 210 110"/><circle class="source-node" cx="343" cy="35" r="3"/><path class="chart-link" d="M387 35 C387 85 210 75 210 110"/><circle class="source-node" cx="387" cy="35" r="3"/><path class="chart-line secondary" d="M210 110 Q210 145 95 155"/><circle class="output-node" cx="95" cy="155" r="4"/><path class="chart-line secondary" d="M210 110 Q210 145 210 155"/><circle class="output-node" cx="210" cy="155" r="4"/><path class="chart-line secondary" d="M210 110 Q210 145 325 155"/><circle class="output-node" cx="325" cy="155" r="4"/><circle class="output-node" cx="210" cy="110" r="7"/><text class="chart-label" x="230" y="109">ONE RELEASE</text></svg><figcaption>Conceptual illustration · not customer data</figcaption></figure><div class="proj-meta">TYPESCRIPT · NODE.JS · MCP · SQLITE · OPENAI</div>
                     <p class="proj-desc">An offline pipeline and read-only MCP/JSON service that explains which product releases matter to each customer. Combines Slack and Notion sources with usage, feedback and release-access rules.</p>
                     <div class="proj-stats"><div class="ps-item"><div class="ps-value">~3,000</div><div class="ps-label">unique releases</div></div><div class="ps-item"><div class="ps-value">179</div><div class="ps-label">customers in store</div></div></div>
                     <details class="project-details"><summary>Approach &amp; results</summary><p class="proj-desc">Deterministic de-duplication, schema-constrained AI tags with verified source quotes, and human approval of feedback links. Incremental processing keeps model work off the query path.</p></details>
                 </article>
 
-                <article class="card project-card" id="nps-product-usage">
-                    <div class="proj-head"><div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div><h3 class="proj-title">NPS &amp; Product-Usage Study</h3></div>
-                    <div class="proj-meta">PYTHON · SCIPY · STATSMODELS · METABASE · USERPILOT</div>
+                <article class="card project-card" id="nps-product-usage"><div class="project-index">04 / RESEARCH</div>
+                    <div class="proj-head"><h3 class="proj-title">NPS &amp; Product-Usage Study</h3></div>
+                    <figure class="project-graph"><svg viewBox="0 0 420 185" role="img" aria-labelledby="nps-title"><title id="nps-title">Illustrative estimates with uncertainty intervals</title><g class="chart-grid"><path d="M25 25 H395"/><path d="M25 65 H395"/><path d="M25 105 H395"/><path d="M25 145 H395"/><path d="M25 25 V145"/><path d="M99 25 V145"/><path d="M173 25 V145"/><path d="M247 25 V145"/><path d="M321 25 V145"/><path d="M395 25 V145"/></g><path class="chart-line " d="M75 40 H180 M75 35 V45 M180 35 V45"/><circle class="output-node" cx="130" cy="40" r="4"/><path class="chart-line secondary" d="M120 71 H310 M120 66 V76 M310 66 V76"/><circle class="output-node" cx="220" cy="71" r="4"/><path class="chart-line " d="M95 102 H255 M95 97 V107 M255 97 V107"/><circle class="output-node" cx="160" cy="102" r="4"/><path class="chart-line secondary" d="M180 133 H370 M180 128 V138 M370 128 V138"/><circle class="output-node" cx="275" cy="133" r="4"/><text class="chart-label" x="25" y="178">ESTIMATES + UNCERTAINTY</text></svg><figcaption>Conceptual illustration · not customer data</figcaption></figure><div class="proj-meta">PYTHON · SCIPY · STATSMODELS · METABASE · USERPILOT</div>
                     <p class="proj-desc">An end-to-end study of what drives customer satisfaction, joining survey, usage, support and CRM data. Reproducible analysis tests about 30 hypotheses and publishes an automatically refreshed weekly dashboard.</p>
                     <div class="proj-stats"><div class="ps-item"><div class="ps-value">12</div><div class="ps-label">sources joined</div></div><div class="ps-item"><div class="ps-value">~30</div><div class="ps-label">hypotheses tested</div></div></div>
                     <details class="project-details"><summary>Approach &amp; results</summary><p class="proj-desc">Used customer-level analysis, bootstrap intervals and multiple-comparison correction. Found that usage explained less than 7% of customer NPS variation, and translated the evidence into six recommendations for customer-facing teams.</p></details>
@@ -448,11 +160,142 @@
                 </article>
             </div>
         </section>
+<section id="approach" class="section approach"><div class="section-head"><div class="section-tag">02 / THE APPROACH</div><h2 class="section-title">Useful is the outcome.<br><em>Trust is built in.</em></h2></div><div class="approach-grid"><article><span class="step-number">01</span><h3>Connect the signals</h3><p>Resolve inconsistent IDs and bring scattered sources into a coherent data model.</p></article><article><span class="step-number">02</span><h3>Challenge the evidence</h3><p>Check assumptions, measure uncertainty, and benchmark against the real runtime.</p></article><article><span class="step-number">03</span><h3>Make it usable</h3><p>Build for the people making the decision. Explain the result and show its limits.</p></article><article><span class="step-number">04</span><h3>Close the loop</h3><p>Ship, observe real feedback, and feed what you learn back into the system.</p></article></div></section>
+        <section id="about" class="section">
+            <div class="section-head">
+                <div class="section-tag">03 / ABOUT</div>
+                <h2 class="section-title">From analysis to working products</h2>
+            </div>
 
-        <!-- Education -->
+            <div class="about-grid">
+                <div class="card about-card">
+                    <div class="card-head">
+                        <span class="card-title">A little context</span>
+                        <span class="card-meta">UPDATED · 2026</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            I'm a <strong>Data Scientist</strong> based in Stockholm with a Master's in Data Science from Uppsala University and 2+ years of hands-on experience building analytics, applied AI and full-stack data products at <strong>Position Green</strong>.
+                        </p>
+                        <p>
+                            My work sits at the intersection of <em>product, engineering and the business</em> — framing questions with stakeholders, connecting messy data, testing the evidence, and shipping tools that fit the way teams work.
+                        </p>
+                        <p>
+                            Recent work includes a customer health console, an MCP release service, an NPS research pipeline and an AI skill for ESG data review. I build in validation, human review and production feedback so teams can understand and trust the results.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-side">
+                    <div class="card mini-card">
+                        <div class="mini-label">LOCATION</div>
+                        <div class="mini-value">Stockholm, Sweden</div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="mini-label">FOCUS</div>
+                        <div class="mini-value">Applied AI · Analytics · Data Products</div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="mini-label">LANGUAGES</div>
+                        <div class="mini-value">English · Malayalam · Hindi</div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="mini-label">STATUS</div>
+                        <div class="mini-value mini-online">
+                            <span class="mini-pulse"></span> Employed · open for new challenges
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="section">
+            <div class="section-head">
+                <div class="section-tag">04 / EXPERIENCE</div>
+                <h2 class="section-title">Track record</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="t-item">
+                    <div class="t-marker"><span></span></div>
+                    <div class="card t-card">
+                        <div class="t-card-head">
+                            <div>
+                                <div class="t-role">Data Scientist</div>
+                                <div class="t-company">Position Green · Stockholm</div>
+                            </div>
+                            <div class="t-period">Aug 2024 — Present</div>
+                        </div>
+                        <ul class="t-bullets">
+                            <li><strong>Customer Health Console</strong> — shipped a FastAPI and React app in about three weeks, bringing product usage, support, CRM and releases into one view with role-based access and weekday briefs.</li>
+                            <li><strong>Data Anomaly Finder</strong> — built and benchmarked an AI agent skill for ESG data review; reduced peak scan memory by 72% and eliminated 217 false critical/high unit flags in the benchmark while retaining planted errors.</li>
+                            <li><strong>Customer-Relevant Releases MCP</strong> — built a TypeScript pipeline and read-only MCP/JSON service with evidence-backed AI tagging, deterministic de-duplication and human-reviewed feedback links.</li>
+                            <li><strong>NPS and product-usage research</strong> — joined 12 sources, tested about 30 hypotheses with uncertainty estimates and multiple-comparison correction, and automated a weekly dashboard refresh.</li>
+                            <li><strong>Data foundations</strong> — built self-service Metabase reporting, feature adoption analytics and dbt pipelines for Revenue Operations.</li>
+                        </ul>
+                        <div class="t-tags"><span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">SQL</span><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">MCP</span><span class="chip">dbt</span><span class="chip">Langfuse</span></div>
+                    </div>
+                </div>
+
+                <div class="t-item">
+                    <div class="t-marker"><span></span></div>
+                    <div class="card t-card">
+                        <div class="t-card-head">
+                            <div>
+                                <div class="t-role">Platform Onboarding Analyst <span class="t-pill">Intern</span></div>
+                                <div class="t-company">Position Green · Stockholm</div>
+                            </div>
+                            <div class="t-period">Oct 2023 — Jun 2024</div>
+                        </div>
+                        <ul class="t-bullets">
+                            <li>Designed a comprehensive <strong>customer data model</strong> with the CTO, improving the org's ability to analyze platform data.</li>
+                            <li>Implemented scalable measure structures for sustainability data aligned with <span class="hl">ESRS, GHG Protocol & GRI</span> frameworks.</li>
+                        </ul>
+                        <div class="t-tags">
+                            <span class="chip">Data Modeling</span>
+                            <span class="chip">SQL Server</span>
+                            <span class="chip">ESG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section">
+            <div class="section-head">
+                <div class="section-tag">05 / TOOLKIT</div>
+                <h2 class="section-title">The toolkit</h2>
+            </div>
+
+            <p class="hero-subtitle">Tools and methods used across recent projects and my work at Position Green.</p>
+            <div class="skills-categories">
+                <div class="card sk-card">
+                    <div class="sk-head">Languages &amp; Querying</div>
+                    <div class="sk-tags"><span class="chip">Python</span><span class="chip">SQL / T-SQL</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Bash</span></div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Applied AI &amp; Evaluation</div>
+                    <div class="sk-tags"><span class="chip">Claude agent skills</span><span class="chip">Model Context Protocol</span><span class="chip">OpenAI structured outputs</span><span class="chip">Evidence-grounded classification</span><span class="chip">Human-in-the-loop review</span><span class="chip">Langfuse</span><span class="chip">LLM-as-a-judge</span></div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Statistics &amp; Machine Learning</div>
+                    <div class="sk-tags"><span class="chip">pandas</span><span class="chip">SciPy</span><span class="chip">statsmodels</span><span class="chip">scikit-learn</span><span class="chip">SHAP</span><span class="chip">Bootstrap &amp; permutation tests</span><span class="chip">Mixed-effects models</span><span class="chip">Multiple-comparison correction</span></div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Data Engineering &amp; Quality</div>
+                    <div class="sk-tags"><span class="chip">dbt</span><span class="chip">DuckDB</span><span class="chip">Parquet</span><span class="chip">SQL Server</span><span class="chip">Postgres</span><span class="chip">SQLite</span><span class="chip">Entity resolution</span><span class="chip">Deterministic data checks</span></div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Full-Stack &amp; Deployment</div>
+                    <div class="sk-tags"><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">SQLAlchemy</span><span class="chip">REST APIs</span><span class="chip">Google OAuth</span><span class="chip">Role-based access</span><span class="chip">Docker</span><span class="chip">Render</span><span class="chip">Git</span></div>
+                </div>
+                <div class="card sk-card">
+                    <div class="sk-head">Analytics &amp; Communication</div>
+                    <div class="sk-tags"><span class="chip">Metabase</span><span class="chip">Userpilot</span><span class="chip">PostHog</span><span class="chip">HubSpot</span><span class="chip">Reproducible notebooks</span><span class="chip">Stakeholder discovery</span><span class="chip">Evidence-graded insights</span><span class="chip">Automated reporting</span></div>
+                </div>
+            </div>
+        </section>
         <section id="education" class="section">
             <div class="section-head">
-                <div class="section-tag">05 · EDUCATION</div>
+                <div class="section-tag">06 / EDUCATION</div>
                 <h2 class="section-title">Academic foundation</h2>
             </div>
 
@@ -497,11 +340,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contact -->
         <section id="contact" class="section">
             <div class="section-head">
-                <div class="section-tag">06 · CONTACT</div>
+                <div class="section-tag">07 / CONTACT</div>
                 <h2 class="section-title">Let's talk data</h2>
             </div>
 
@@ -537,11 +378,5 @@
                 </div>
             </div>
         </section>
-
-        <footer class="footer">
-            <div>© <span id="year"></span> Sarath Peringayi Suresh · Built with data in mind.</div>
-            <div class="footer-meta"><span class="cursor-block"></span> v2.0</div>
-        </footer>
-    </main>
-</body>
-</html>
+<footer class="footer"><a class="brand" href="#overview">SPS<span class="brand-dot">.</span></a><span>© <span id="year">2026</span> Sarath Peringayi Suresh</span><a href="https://github.com/SarathPeringayiSuresh" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#overview">Back to top ↑</a></footer>
+</main></body></html>

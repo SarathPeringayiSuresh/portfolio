@@ -1,123 +1,77 @@
-/* =========================================================
-   Sarath Peringayi Suresh portfolio — interactivity
-   ========================================================= */
-
+/* Graphs and progressive enhancement; all portfolio content works without JavaScript. */
 (() => {
-    /* ---------- Live Stockholm clock ---------- */
-    const clockEl = document.getElementById('local-time');
+    document.documentElement.classList.add('js');
+    const clock = document.getElementById('local-time');
     const updateClock = () => {
-        if (!clockEl) return;
-        try {
-            const fmt = new Intl.DateTimeFormat('en-GB', {
-                timeZone: 'Europe/Stockholm',
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: false,
-            });
-            clockEl.textContent = fmt.format(new Date());
-        } catch (_) {
-            const d = new Date();
-            clockEl.textContent =
-                String(d.getHours()).padStart(2, '0') + ':' +
-                String(d.getMinutes()).padStart(2, '0');
-        }
+        if (clock) clock.textContent = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', hour12: false,
+        }).format(new Date());
     };
     updateClock();
-    setInterval(updateClock, 30 * 1000);
+    setInterval(updateClock, 30000);
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* ---------- Year ---------- */
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    /* ---------- Counter animation ---------- */
-    const animateCounter = (el) => {
-        const target = parseFloat(el.dataset.target || '0');
-        const suffix = el.dataset.suffix || '';
-        const duration = 1500;
-        const start = performance.now();
-        const ease = (t) => 1 - Math.pow(1 - t, 3);
-
-        const tick = (now) => {
-            const t = Math.min(1, (now - start) / duration);
-            const value = Math.round(target * ease(t));
-            el.textContent = value + suffix;
-            if (t < 1) requestAnimationFrame(tick);
-            else el.textContent = target + suffix;
-        };
-        requestAnimationFrame(tick);
-    };
-
-    const counters = document.querySelectorAll('.counter');
-    if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((e) => {
-                    if (e.isIntersecting) {
-                        animateCounter(e.target);
-                        io.unobserve(e.target);
-                    }
-                });
-            },
-            { threshold: 0.4 }
-        );
-        counters.forEach((c) => io.observe(c));
-    } else {
-        counters.forEach(animateCounter);
-    }
-
-    /* ---------- Mobile drawer ---------- */
-    const navToggle = document.querySelector('.nav-toggle');
-    const backdrop = document.querySelector('.drawer-backdrop');
-    const openDrawer = () => {
-        document.body.classList.add('nav-open');
-        if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
-        if (backdrop) backdrop.removeAttribute('hidden');
-    };
-    const closeDrawer = () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    const closeNav = () => {
         document.body.classList.remove('nav-open');
-        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
     };
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            if (document.body.classList.contains('nav-open')) closeDrawer();
-            else openDrawer();
+    toggle.addEventListener('click', () => {
+        const open = document.body.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+    nav.addEventListener('click', (event) => { if (event.target.closest('a')) closeNav(); });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && document.body.classList.contains('nav-open')) {
+            closeNav();
+            toggle.focus();
+        }
+    });
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.site-header')) closeNav();
+    });
+    const wideScreen = window.matchMedia('(min-width: 761px)');
+    wideScreen.addEventListener('change', closeNav);
+
+    const descriptions = [
+        'Connect product, support, CRM and feedback data. Start with the source, not the assumption.',
+        'Validate IDs, units and assumptions. Benchmark the system and measure uncertainty before trusting a result.',
+        'Put findings in context. Ground AI output in source evidence and keep human review where it matters.',
+        'Bring the result into everyday work: useful interfaces, clear recommendations and feedback that improves the system.',
+    ];
+    const engine = document.querySelector('.engine');
+    const buttons = Array.from(document.querySelectorAll('.stage-button'));
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const selected = Number(button.dataset.stage);
+            engine.dataset.selected = String(selected);
+            buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+            engine.querySelectorAll('.flow-layer').forEach((layer) => {
+                const level = Number(layer.dataset.layer);
+                layer.classList.toggle('is-highlighted', level === selected || level === selected - 1);
+            });
+            document.getElementById('stage-description').textContent = descriptions[selected];
+        });
+    });
+    if ('IntersectionObserver' in window) {
+        const links = Array.from(nav.querySelectorAll('a'));
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                links.forEach((link) => {
+                    const active = link.dataset.section === entry.target.id;
+                    link.classList.toggle('active', active);
+                    if (active) link.setAttribute('aria-current', 'location');
+                    else link.removeAttribute('aria-current');
+                });
+            });
+        }, { rootMargin: '-10% 0px -65% 0px' });
+        links.forEach((link) => {
+            const section = document.getElementById(link.dataset.section);
+            if (section) observer.observe(section);
         });
     }
-    if (backdrop) backdrop.addEventListener('click', closeDrawer);
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeDrawer();
-    });
-
-    /* ---------- Scrollspy for nav ---------- */
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = Array.from(document.querySelectorAll('main .section'));
-    const setActive = (id) => {
-        navLinks.forEach((l) =>
-            l.classList.toggle('active', l.dataset.section === id)
-        );
-    };
-    if ('IntersectionObserver' in window && sections.length) {
-        const spy = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((e) => {
-                    if (e.isIntersecting) setActive(e.target.id);
-                });
-            },
-            { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
-        );
-        sections.forEach((s) => spy.observe(s));
-    }
-    navLinks.forEach((l) =>
-        l.addEventListener('click', (ev) => {
-            const id = l.getAttribute('href').replace('#', '');
-            const t = document.getElementById(id);
-            if (t) {
-                ev.preventDefault();
-                t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                setActive(id);
-            }
-            if (document.body.classList.contains('nav-open')) closeDrawer();
-        })
-    );
-
 })();
