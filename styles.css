@@ -1140,3 +1140,12 @@ body.nav-open .drawer-backdrop {
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
+/* Recent project case studies */
+.proj-title { margin: 0; }
+.earlier-work-title { margin: 2.5rem 0 1.25rem; font-size: 1.15rem; }
+.project-details { margin-top: 1.25rem; border-top: 1px solid var(--border, #1e2742); padding-top: 1rem; }
+.project-details summary { cursor: pointer; color: var(--accent, #00e5ff); font-size: .85rem; line-height: 1.5; }
+.project-details summary:focus-visible { outline: 2px solid #00e5ff; outline-offset: 4px; }
+.project-details .proj-desc { margin-top: .75rem; }
+.kpi-card > .card-meta { line-height: 1.6; margin-top: .75rem; }
